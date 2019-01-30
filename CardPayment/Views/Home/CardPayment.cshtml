@@ -1,0 +1,39 @@
+﻿@model CardPayment.BundleConfig
+
+@{
+    ViewBag.Title = "CardPayment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CardPayment</h2>
+<form name="gust" method="post" action=" https://demo.gust.ng/process/card/api/v1/initiate" class="form-horizontal">
+    <div class="form-group">
+        <input type="text" name="CustomerFullName" value="ogechi okoroafor" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="text" name="CustomerEmail" value="oge.okoroafor@email.com" class="form-control" />
+    </div>
+        <div class="form-group">
+            <input type="text" name="CustomerPhoneNumber" value="+2348068891891" class="form-control" />
+        </div>
+            <div class="form-group">
+                <input type="text" name="TransactionID" value="@ViewBag.TID" class="form-control" />
+            </div>
+                <div class="form-group">
+                    <input type="text" name="Description" value="Swatch Wrist Watch" class="form-control" />
+                </div>
+                    <div class="form-group">
+                        <input type="text" name="Amount" value="200" class="form-control" disabled />
+                    </div>
+                        <div class="form-group">
+                            <input type="hidden" name="ClientID" value="3f389a0a-fffa-41b9-8a7d-e0521036b0ab" class="form-control" />
+                        </div>
+                            <div class="form-group">
+                                <input type="hidden" name="PublicKey" value="test_pk969a985da35c41a99f6fcae01c2e946c" class="form-control" />
+                                </div>
+                                <input type="hidden" name="Hash" value="" class="form-control" />
+                                <input type="hidden" name="RedirectUrl" value="ercasng.com" class="form-control" />
+                                <input type="submit" />
+
+</form>
+
